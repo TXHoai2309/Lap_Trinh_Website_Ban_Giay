@@ -1,0 +1,512 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*header*/
+.header_container {
+    background-color: #ffffff;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.header_place {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    height: 100%;
+}
+
+.search_place {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search_box {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    padding-left: 30px;
+    background: transparent;
+    font-size: 12px;
+}
+
+.search_button {
+    position: absolute;
+    border: none;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+}
+
+.logo_place {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+#first_logo {
+    color: #007bff;
+}
+
+#last_logo {
+    color: #747373;
+}
+
+.user_actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+    .user_actions .account,
+    .user_actions .favorites,
+    .user_actions .cart {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .user_actions img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .user_actions a {
+        font-size: 13px;
+        text-decoration: none;
+        color: #333;
+    }
+
+        .user_actions a:hover {
+            color: #007bff;
+        }
+
+/*menu*/
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+#menu_list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_item {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 0;
+    transition: opacity 0.3s ease;
+}
+
+    .menu_item::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition: width 0.3s ease;
+    }
+
+    .menu_item:hover::after {
+        width: 100%;
+    }
+
+#menu_list:hover .menu_item {
+    opacity: 0.5;
+}
+
+#menu_list .menu_item:hover {
+    opacity: 1;
+}
+/*end menu*/
+.banner_sale {
+    background-color: #007bff;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+}
+/*end menu*/
+/* Kết thúc phần Header/Menu */
+
+
+.favorites-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+    .breadcrumb a {
+        text-decoration: none;
+        color: #555;
+    }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+.favorites-header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Thêm CSS cho .product_list (sao chép từ Products.css) */
+.product_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Tùy chỉnh lại thẻ sản phẩm cho trang favorites */
+.favorite_item {
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .favorite_item .product_img_container {
+        position: relative;
+        padding: 15px;
+        background-color: #f7f7f7;
+    }
+
+        .favorite_item .product_img_container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    .favorite_item .product_info {
+        padding: 15px;
+    }
+
+    .favorite_item .product_name {
+        font-size: 16px;
+        font-weight: normal;
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        text-decoration: none;
+    }
+.sale-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    height: 27px;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.new-price {
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+.favorites-container .product_list li {
+    display: flex;
+}
+
+.favorite_item .product_price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    height: 27px;
+}
+
+.favorite_actions .btn {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 0 auto 10px auto;
+    padding: 12px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.favorite_actions .btn-add-to-cart {
+    background-color: #000;
+    color: #fff;
+}
+
+.favorite_actions .btn-remove {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Phần hiển thị khi không có sản phẩm */
+.empty-favorites {
+    text-align: center;
+    padding: 80px 20px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}
+
+    .empty-favorites h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .empty-favorites .btn-shopping {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+/* Thêm CSS cho Footer (sao chép từ các tệp khác) */
+/*footer*/
+.footer_container {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding: 40px 20px;
+}
+
+    .footer_container p {
+        margin: 10px 0;
+    }
+
+    .footer_container a.menu_item {
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+        .footer_container a.menu_item:hover {
+            text-decoration: underline;
+        }
+
+        .footer_container a.menu_item::after {
+            display: none;
+        }
+
+.icon_menu_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icon_menu {
+    display: flex;
+    gap: 20px;
+}
+
+    .icon_menu img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+.footer_container .email_input {
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer_container .SUBSCRIBE_btn {
+    width: 120px;
+    height: 37px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+    .footer_container .SUBSCRIBE_btn:hover {
+        background-color: #555;
+    }
+/*end footer*/
+
+@media (max-width: 768px) {
+    .header_place {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .logo_place {
+        order: 1;
+        transform: none;
+        font-size: 22px;
+    }
+
+    .user_actions {
+        order: 2;
+        gap: 10px;
+    }
+
+        .user_actions .account,
+        .user_actions .favorites,
+        .user_actions .cart {
+            gap: 4px;
+        }
+
+        .user_actions img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .user_actions a {
+            font-size: 11px;
+        }
+    .search_place {
+        order: 3;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .menu {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    #menu_list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .menu_item {
+        font-size: 15px;
+        padding: 3px 0;
+    }
+
+        .menu_item:hover::after {
+            width: 0;
+        }
+
+    .favorites-header {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .product_list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .favorite_item .product_name {
+        font-size: 14px;
+    }
+
+    .favorite_item .product_price {
+        font-size: 16px;
+    }
+
+    .favorite_actions .btn {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    .empty-favorites {
+        padding: 40px 15px;
+    }
+
+        .empty-favorites h2 {
+            font-size: 18px;
+        }
+
+    .footer_container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .icon_menu {
+        justify-content: center;
+    }
+
+    .footer_container .email_input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer_container .SUBSCRIBE_btn {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}

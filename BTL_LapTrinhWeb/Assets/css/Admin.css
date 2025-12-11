@@ -1,0 +1,350 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-color: white;
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.header-title,
+.header-logo,
+.header-search {
+    flex: 1;
+}
+.header-title h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: left;
+}
+.header-logo {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    text-align: center;
+}
+.header-logo .first_logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.header-logo .last_logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #555;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .header-search .search_box {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 5px;
+        border-bottom: 2px solid #333;
+    }
+
+    .header-search .search_button {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+/*menu*/
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+#menu_list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_item {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 0;
+    transition: opacity 0.3s ease;
+}
+
+    .menu_item::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition: width 0.3s ease;
+    }
+
+    .menu_item:hover::after {
+        width: 100%;
+    }
+
+#menu_list:hover .menu_item {
+    opacity: 0.5;
+}
+
+#menu_list .menu_item:hover {
+    opacity: 1;
+}
+/*end menu*/
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.asp-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.product-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+    .product-grid th, .product-grid td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+        vertical-align: middle;
+        word-wrap: break-word;
+    }
+
+    .product-grid th {
+        background-color: #f2f2f2;
+    }
+
+    .product-grid img {
+        max-width: 50px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .product-grid a {
+        color: #007bff;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+        .product-grid a:hover {
+            text-decoration: underline;
+        }
+
+.edit-textbox {
+    width: 95%;
+    padding: 2px 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.grid-action-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+    .grid-action-btn:hover {
+        text-decoration: none;
+        opacity: 0.9;
+    }
+
+.product-grid th:nth-child(1), .product-grid td:nth-child(1) {
+    width: 3%;
+}
+.product-grid th:nth-child(2), .product-grid td:nth-child(2) {
+    width: 8%;
+}
+.product-grid th:nth-child(3), .product-grid td:nth-child(3) {
+    width: 20%;
+}
+.product-grid th:nth-child(4), .product-grid td:nth-child(4) {
+    width: 8%;
+}
+.product-grid th:nth-child(5), .product-grid td:nth-child(5) {
+    width: 10%;
+}
+.product-grid th:nth-child(6), .product-grid td:nth-child(6) {
+    width: 7%;
+}
+.product-grid th:nth-child(7), .product-grid td:nth-child(7) {
+    width: 30%;
+}
+.product-grid th:nth-child(8), .product-grid td:nth-child(8) {
+    width: 6%;
+}
+.product-grid th:nth-child(9), .product-grid td:nth-child(9) {
+    width: 8%;
+}
+
+
+/*Dùng cho bên trang AddAdminProduct*/
+.form-container {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+.form-textbox, .form-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.form-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-save {
+    background-color: #28a745;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+    display: inline-block;
+    line-height: normal;
+    padding: 11px 20px;
+}
+
+.error-message {
+    color: red;
+}
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .header-search {
+        width: 90%;
+        justify-content: center;
+    }
+
+        .header-search .search_box {
+            width: 80%;
+        }
+    .menu {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    #menu_list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .menu_item {
+        font-size: 15px;
+        padding: 3px 0;
+    }
+
+        .menu_item:hover::after {
+            width: 0;
+        }
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .asp-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .grid-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        border: 1px solid #ddd;
+    }
+
+    .product-grid {
+        table-layout: auto;
+        width: auto;
+        min-width: 1200px;
+    }
+
+        .product-grid th, .product-grid td {
+            width: auto !important;
+            white-space: nowrap;
+        }
+
+            .product-grid th:nth-child(7), .product-grid td:nth-child(7) {
+                min-width: 300px;
+                white-space: normal;
+            }
+
+            .product-grid th:nth-child(3), .product-grid td:nth-child(3) {
+                min-width: 250px;
+                white-space: normal;
+            }
+}

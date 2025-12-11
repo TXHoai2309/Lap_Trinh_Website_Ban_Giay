@@ -1,0 +1,510 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C808F4FE-8EDF-4940-BFBA-9C93E41DC5F7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BTL_LapTrinhWeb</RootNamespace>
+    <AssemblyName>BTL_LapTrinhWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="AdminAddProduct.aspx" />
+    <Content Include="Assets\css\Admin.css" />
+    <Content Include="Assets\css\Blog.css" />
+    <Content Include="Assets\css\Cart.css" />
+    <Content Include="Assets\css\Favorites.css" />
+    <Content Include="Assets\css\MyAccount.css" />
+    <Content Include="Assets\css\Products.css" />
+    <Content Include="Assets\css\Productdetail.css" />
+    <Content Include="Assets\css\Review.css" />
+    <Content Include="Assets\css\SignIn.css" />
+    <Content Include="Assets\css\ThankYou.css" />
+    <Content Include="Assets\css\Trangchu.css" />
+    <Content Include="Assets\css\UserManager.css" />
+    <Content Include="Assets\images\Chung\account.png" />
+    <Content Include="Assets\images\Chung\facebook.png" />
+    <Content Include="Assets\images\Chung\giohang.png" />
+    <Content Include="Assets\images\Chung\icon_delete.png" />
+    <Content Include="Assets\images\Chung\icon_favorite.png" />
+    <Content Include="Assets\images\Chung\icon_favorite_green.png" />
+    <Content Include="Assets\images\Chung\insta.png" />
+    <Content Include="Assets\images\Chung\kinhlup.png" />
+    <Content Include="Assets\images\Chung\X.png" />
+    <Content Include="Assets\images\Chung\youtube.png" />
+    <Content Include="Assets\images\Kids\anh1_back.png" />
+    <Content Include="Assets\images\Kids\anh1_left.png" />
+    <Content Include="Assets\images\Kids\anh1_top.png" />
+    <Content Include="Assets\images\Kids\anh1_under.png" />
+    <Content Include="Assets\images\Kids\anh2_back.png" />
+    <Content Include="Assets\images\Kids\anh2_left.png" />
+    <Content Include="Assets\images\Kids\anh2_top.png" />
+    <Content Include="Assets\images\Kids\anh2_under.png" />
+    <Content Include="Assets\images\Kids\anh3_back.png" />
+    <Content Include="Assets\images\Kids\anh3_left.png" />
+    <Content Include="Assets\images\Kids\anh3_top.png" />
+    <Content Include="Assets\images\Kids\anh3_under.png" />
+    <Content Include="Assets\images\Kids\anh4_back.png" />
+    <Content Include="Assets\images\Kids\anh4_left.png" />
+    <Content Include="Assets\images\Kids\anh4_top.png" />
+    <Content Include="Assets\images\Kids\anh4_under.png" />
+    <Content Include="Assets\images\Kids\anh5_back.png" />
+    <Content Include="Assets\images\Kids\anh5_left.png" />
+    <Content Include="Assets\images\Kids\anh5_top.png" />
+    <Content Include="Assets\images\Kids\anh5_under.png" />
+    <Content Include="Assets\images\Kids\anh6_back.png" />
+    <Content Include="Assets\images\Kids\anh6_left.png" />
+    <Content Include="Assets\images\Kids\anh6_top.png" />
+    <Content Include="Assets\images\Kids\anh6_under.png" />
+    <Content Include="Assets\images\Kids\anh7_back.png" />
+    <Content Include="Assets\images\Kids\anh7_left.png" />
+    <Content Include="Assets\images\Kids\anh7_top.png" />
+    <Content Include="Assets\images\Kids\anh7_under.png" />
+    <Content Include="Assets\images\Kids\anh8_back.png" />
+    <Content Include="Assets\images\Kids\anh8_left.png" />
+    <Content Include="Assets\images\Kids\anh8_top.png" />
+    <Content Include="Assets\images\Kids\anh8_under.png" />
+    <Content Include="Assets\images\Kids\anh9_back.png" />
+    <Content Include="Assets\images\Kids\anh9_left.png" />
+    <Content Include="Assets\images\Kids\anh9_top.png" />
+    <Content Include="Assets\images\Kids\anh9_under.png" />
+    <Content Include="Assets\images\Kids\icon_arrow_down.png" />
+    <Content Include="Assets\images\Kids\icon_filter.png" />
+    <Content Include="Assets\images\Kids\shoes_kid1.png" />
+    <Content Include="Assets\images\Kids\shoes_kid2.png" />
+    <Content Include="Assets\images\Kids\shoes_kid3.png" />
+    <Content Include="Assets\images\Kids\shoes_kid4.png" />
+    <Content Include="Assets\images\Kids\shoes_kid5.png" />
+    <Content Include="Assets\images\Kids\shoes_kid6.png" />
+    <Content Include="Assets\images\Kids\shoes_kid7.png" />
+    <Content Include="Assets\images\Kids\shoes_kid8.png" />
+    <Content Include="Assets\images\Kids\shoes_kid9.png" />
+    <Content Include="Assets\images\Men\anh10_back.png" />
+    <Content Include="Assets\images\Men\anh10_left.png" />
+    <Content Include="Assets\images\Men\anh10_top.png" />
+    <Content Include="Assets\images\Men\anh10_under.png" />
+    <Content Include="Assets\images\Men\anh11_back.png" />
+    <Content Include="Assets\images\Men\anh11_left.png" />
+    <Content Include="Assets\images\Men\anh11_top.png" />
+    <Content Include="Assets\images\Men\anh11_under.png" />
+    <Content Include="Assets\images\Men\anh12_back.png" />
+    <Content Include="Assets\images\Men\anh12_left.png" />
+    <Content Include="Assets\images\Men\anh12_top.png" />
+    <Content Include="Assets\images\Men\anh12_under.png" />
+    <Content Include="Assets\images\Men\anh13_back.png" />
+    <Content Include="Assets\images\Men\anh13_left.png" />
+    <Content Include="Assets\images\Men\anh13_top.png" />
+    <Content Include="Assets\images\Men\anh13_under.png" />
+    <Content Include="Assets\images\Men\anh14_back.png" />
+    <Content Include="Assets\images\Men\anh14_left.png" />
+    <Content Include="Assets\images\Men\anh14_top.png" />
+    <Content Include="Assets\images\Men\anh14_under.png" />
+    <Content Include="Assets\images\Men\anh1_back.png" />
+    <Content Include="Assets\images\Men\anh1_left.jpg" />
+    <Content Include="Assets\images\Men\anh1_top.png" />
+    <Content Include="Assets\images\Men\anh1_under.png" />
+    <Content Include="Assets\images\Men\anh2_back.png" />
+    <Content Include="Assets\images\Men\anh2_left.png" />
+    <Content Include="Assets\images\Men\anh2_top.png" />
+    <Content Include="Assets\images\Men\anh2_under.png" />
+    <Content Include="Assets\images\Men\anh3_back.png" />
+    <Content Include="Assets\images\Men\anh3_left.png" />
+    <Content Include="Assets\images\Men\anh3_top.png" />
+    <Content Include="Assets\images\Men\anh3_under.png" />
+    <Content Include="Assets\images\Men\anh4_back.png" />
+    <Content Include="Assets\images\Men\anh4_left.png" />
+    <Content Include="Assets\images\Men\anh4_top.png" />
+    <Content Include="Assets\images\Men\anh4_under.png" />
+    <Content Include="Assets\images\Men\anh5_back.png" />
+    <Content Include="Assets\images\Men\anh5_left.png" />
+    <Content Include="Assets\images\Men\anh5_top.png" />
+    <Content Include="Assets\images\Men\anh5_under.png" />
+    <Content Include="Assets\images\Men\anh6_back.png" />
+    <Content Include="Assets\images\Men\anh6_left.png" />
+    <Content Include="Assets\images\Men\anh6_top.png" />
+    <Content Include="Assets\images\Men\anh6_under.png" />
+    <Content Include="Assets\images\Men\anh7_back.png" />
+    <Content Include="Assets\images\Men\anh7_left.png" />
+    <Content Include="Assets\images\Men\anh7_top.png" />
+    <Content Include="Assets\images\Men\anh7_under.png" />
+    <Content Include="Assets\images\Men\anh8_back.png" />
+    <Content Include="Assets\images\Men\anh8_left.png" />
+    <Content Include="Assets\images\Men\anh8_top.png" />
+    <Content Include="Assets\images\Men\anh8_under.png" />
+    <Content Include="Assets\images\Men\anh9_back.png" />
+    <Content Include="Assets\images\Men\anh9_left.png" />
+    <Content Include="Assets\images\Men\anh9_top.png" />
+    <Content Include="Assets\images\Men\anh9_under.png" />
+    <Content Include="Assets\images\Men\icon_arrow_down.png" />
+    <Content Include="Assets\images\Men\icon_filter.png" />
+    <Content Include="Assets\images\Men\shoes_man_1.png" />
+    <Content Include="Assets\images\Men\shoes_man_10.png" />
+    <Content Include="Assets\images\Men\shoes_man_11.png" />
+    <Content Include="Assets\images\Men\shoes_man_12.png" />
+    <Content Include="Assets\images\Men\shoes_man_13.png" />
+    <Content Include="Assets\images\Men\shoes_man_14.png" />
+    <Content Include="Assets\images\Men\shoes_man_15.png" />
+    <Content Include="Assets\images\Men\shoes_man_16.png" />
+    <Content Include="Assets\images\Men\shoes_man_17.png" />
+    <Content Include="Assets\images\Men\shoes_man_18.png" />
+    <Content Include="Assets\images\Men\shoes_man_2.png" />
+    <Content Include="Assets\images\Men\shoes_man_3.png" />
+    <Content Include="Assets\images\Men\shoes_man_4.png" />
+    <Content Include="Assets\images\Men\shoes_man_5.png" />
+    <Content Include="Assets\images\Men\shoes_man_6.png" />
+    <Content Include="Assets\images\Men\shoes_man_7.png" />
+    <Content Include="Assets\images\Men\shoes_man_8.png" />
+    <Content Include="Assets\images\Men\shoes_man_9.png" />
+    <Content Include="Assets\images\Trangchu\anhcollection.png" />
+    <Content Include="Assets\images\Trangchu\anh_sale.jpg" />
+    <Content Include="Assets\images\Trangchu\Article1.png" />
+    <Content Include="Assets\images\Trangchu\article2.png" />
+    <Content Include="Assets\images\Trangchu\article3.png" />
+    <Content Include="Assets\images\Trangchu\Bags_Accessories.png" />
+    <Content Include="Assets\images\Trangchu\blog_shoes_1.png" />
+    <Content Include="Assets\images\Trangchu\blog_shoes_2.png" />
+    <Content Include="Assets\images\Trangchu\blog_shoes_3.png" />
+    <Content Include="Assets\images\Trangchu\Kids_wholes.png" />
+    <Content Include="Assets\images\Trangchu\kid_shoes.png" />
+    <Content Include="Assets\images\Trangchu\men_shoes.png" />
+    <Content Include="Assets\images\Trangchu\Men_wholes.png" />
+    <Content Include="Assets\images\Trangchu\sneakers_collection.png" />
+    <Content Include="Assets\images\Trangchu\women_shoes.png" />
+    <Content Include="Assets\images\Trangchu\women_wholes.png" />
+    <Content Include="Assets\images\Women\anh10_back.png" />
+    <Content Include="Assets\images\Women\anh10_left.png" />
+    <Content Include="Assets\images\Women\anh10_top.png" />
+    <Content Include="Assets\images\Women\anh10_under.png" />
+    <Content Include="Assets\images\Women\anh11_back.png" />
+    <Content Include="Assets\images\Women\anh11_left.png" />
+    <Content Include="Assets\images\Women\anh11_top.png" />
+    <Content Include="Assets\images\Women\anh11_under.png" />
+    <Content Include="Assets\images\Women\anh12_back.png" />
+    <Content Include="Assets\images\Women\anh12_left.png" />
+    <Content Include="Assets\images\Women\anh12_top.png" />
+    <Content Include="Assets\images\Women\anh12_under.png" />
+    <Content Include="Assets\images\Women\anh1_back.png" />
+    <Content Include="Assets\images\Women\anh1_left.png" />
+    <Content Include="Assets\images\Women\anh1_top.png" />
+    <Content Include="Assets\images\Women\anh1_under.png" />
+    <Content Include="Assets\images\Women\anh2_back.png" />
+    <Content Include="Assets\images\Women\anh2_left.png" />
+    <Content Include="Assets\images\Women\anh2_top.png" />
+    <Content Include="Assets\images\Women\anh2_under.png" />
+    <Content Include="Assets\images\Women\anh3_back.png" />
+    <Content Include="Assets\images\Women\anh3_left.png" />
+    <Content Include="Assets\images\Women\anh3_top.png" />
+    <Content Include="Assets\images\Women\anh3_under.png" />
+    <Content Include="Assets\images\Women\anh4_back.png" />
+    <Content Include="Assets\images\Women\anh4_left.png" />
+    <Content Include="Assets\images\Women\anh4_top.png" />
+    <Content Include="Assets\images\Women\anh4_under.png" />
+    <Content Include="Assets\images\Women\anh5_back.png" />
+    <Content Include="Assets\images\Women\anh5_left.png" />
+    <Content Include="Assets\images\Women\anh5_top.png" />
+    <Content Include="Assets\images\Women\anh5_under.png" />
+    <Content Include="Assets\images\Women\anh6_back.png" />
+    <Content Include="Assets\images\Women\anh6_left.png" />
+    <Content Include="Assets\images\Women\anh6_top.png" />
+    <Content Include="Assets\images\Women\anh6_under.png" />
+    <Content Include="Assets\images\Women\anh7_back.png" />
+    <Content Include="Assets\images\Women\anh7_left.png" />
+    <Content Include="Assets\images\Women\anh7_top.png" />
+    <Content Include="Assets\images\Women\anh7_under.png" />
+    <Content Include="Assets\images\Women\anh8_back.png" />
+    <Content Include="Assets\images\Women\anh8_left.png" />
+    <Content Include="Assets\images\Women\anh8_top.png" />
+    <Content Include="Assets\images\Women\anh8_under.png" />
+    <Content Include="Assets\images\Women\anh9_back.png" />
+    <Content Include="Assets\images\Women\anh9_left.png" />
+    <Content Include="Assets\images\Women\anh9_top.png" />
+    <Content Include="Assets\images\Women\anh9_under.png" />
+    <Content Include="Assets\images\Women\icon_arrow_down.png" />
+    <Content Include="Assets\images\Women\icon_filter.png" />
+    <Content Include="Assets\images\Women\shoes_women1.png" />
+    <Content Include="Assets\images\Women\shoes_women10.png" />
+    <Content Include="Assets\images\Women\shoes_women11.png" />
+    <Content Include="Assets\images\Women\shoes_women12.png" />
+    <Content Include="Assets\images\Women\shoes_women13.png" />
+    <Content Include="Assets\images\Women\shoes_women2.png" />
+    <Content Include="Assets\images\Women\shoes_women3.png" />
+    <Content Include="Assets\images\Women\shoes_women4.png" />
+    <Content Include="Assets\images\Women\shoes_women5.png" />
+    <Content Include="Assets\images\Women\shoes_women6.png" />
+    <Content Include="Assets\images\Women\shoes_women7.png" />
+    <Content Include="Assets\images\Women\shoes_women8.png" />
+    <Content Include="Assets\images\Women\shoes_women9.png" />
+    <Content Include="Blog1.aspx" />
+    <Content Include="Blog2.aspx" />
+    <Content Include="Blog3.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="Checkout.aspx" />
+    <Content Include="Favorites.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Assets\css\Checkout.css" />
+    <Content Include="Kids.aspx" />
+    <Content Include="LogIn.aspx" />
+    <Content Include="ManageUser.aspx" />
+    <Content Include="Men.aspx" />
+    <Content Include="MyAccount.aspx" />
+    <Content Include="Product_Detail.aspx" />
+    <Content Include="Sale.aspx" />
+    <Content Include="SignIn.aspx" />
+    <Content Include="ThankYou.aspx" />
+    <Content Include="Trangchu.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Women.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddProduct.aspx.cs">
+      <DependentUpon>AdminAddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddProduct.aspx.designer.cs">
+      <DependentUpon>AdminAddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog1.aspx.cs">
+      <DependentUpon>Blog1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog1.aspx.designer.cs">
+      <DependentUpon>Blog1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog2.aspx.cs">
+      <DependentUpon>Blog2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog2.aspx.designer.cs">
+      <DependentUpon>Blog2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog3.aspx.cs">
+      <DependentUpon>Blog3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog3.aspx.designer.cs">
+      <DependentUpon>Blog3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Favorites.aspx.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Favorites.aspx.designer.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Kids.aspx.cs">
+      <DependentUpon>Kids.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kids.aspx.designer.cs">
+      <DependentUpon>Kids.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUser.aspx.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageUser.aspx.designer.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Men.aspx.cs">
+      <DependentUpon>Men.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Men.aspx.designer.cs">
+      <DependentUpon>Men.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="MyAccount.aspx.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAccount.aspx.designer.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Product_Detail.aspx.cs">
+      <DependentUpon>Product_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product_Detail.aspx.designer.cs">
+      <DependentUpon>Product_Detail.aspx</DependentUpon>
+    </Compile>
+    <!-- <Compile Include="MyAccount.aspx.designer.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile> -->
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sale.aspx.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sale.aspx.designer.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYou.aspx.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThankYou.aspx.designer.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trangchu.aspx.cs">
+      <DependentUpon>Trangchu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trangchu.aspx.designer.cs">
+      <DependentUpon>Trangchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Women.aspx.cs">
+      <DependentUpon>Women.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Women.aspx.designer.cs">
+      <DependentUpon>Women.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49852</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49852/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
